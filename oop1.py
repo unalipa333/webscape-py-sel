@@ -3,7 +3,7 @@
 
 
 
-from nis import cat
+
 
 
 se1 = ["Software Engineer", "Max", 20, "Junior, 5000"]
@@ -15,7 +15,7 @@ def mouse(se):
 #classes are used for more complex data structures and contain functions
 #mouse(se2)
 #class
-class S_E:
+class Software_Engineer:
     
     #class object
     alias="Keyboard Magician"
@@ -37,7 +37,7 @@ class S_E:
     # def  information(self):
     #     information = f"My name is {self.name}. My age is {self.age}. My level is {self.level}"
 
-    #     return information
+    #return information
     
     
     #dunder methods.2
@@ -48,9 +48,9 @@ class S_E:
 
     def __eq__(self,other):
         
-        return (self.name == other.name, self.age == other.age)
+        return self.name == other.name, self.age == other.age
 
-    @staticmethod   
+    @staticmethod     #decorator that is a built in. It the "self" argument out of the function
     def animals(age):
         if age > 20:
             return 111
@@ -59,11 +59,11 @@ class S_E:
        
 
 #instance or object(same thing) that is instantiated 
-se1 = S_E("Max", 20, "Junior", 5000)
-se2 = S_E("Lisa", 25, "Associate", 7000)
-se3 = S_E("Lisa", 27, "Associate", 7000)
-print(se1.animals(3))
-print(S_E.animals(99))
+se1 = Software_Engineer("Max", 20, "Junior", 5000)
+se2 = Software_Engineer("Lisa", 25, "Associate", 7000)
+se3 = Software_Engineer("Lisa", 27, "Associate", 7000)
+# print(se1.animals(3))
+# print(Software_Engineer.animals(99))
 
 
 
@@ -77,3 +77,20 @@ print(S_E.animals(99))
 
 
 
+employees = [Software_Engineer("Max", 20, "Jr", 5000),
+             Software_Engineer("Lisa", 27, "Sr", 9000),
+             Software_Engineer("Doug", 35, "Jr", 5000)]
+
+
+
+
+
+def motivate_emp():
+    for employee in employees:
+        employee.code("c++")
+
+    
+
+
+
+motivate_emp()
